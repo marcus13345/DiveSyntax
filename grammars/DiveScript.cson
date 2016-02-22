@@ -1,0 +1,41 @@
+scopeName: "DiveScene";
+fileTypes: ["scene", "template"];
+
+name: "Dive Engine File";
+patterns: [
+	{
+		name: "constant.numeric.integer"
+		match: "#[0-9A-Fa-f]{6}"
+	}
+	{
+		name: "constant.numeric.integer"
+		match: "( |=)[+-]?\\d+[iI]"
+	}
+	{
+		name: "constant.numeric.float"
+		match: "(^|\\s|=|\\n)\\d{0,}\\.?\\d{1,}[Ff]"
+	}
+	{
+		name: "variable"
+		match: "\\$[A-Za-z0-9]*"
+	}
+	{
+		name: "comment"
+		match: "^#.*\n"
+	}
+	{
+		name: "keyword.control"
+		match: "(Template|Component|End Component)"
+	}
+	{
+		name: "string.quoted.double"
+		begin: "\""
+		end: "\""
+		patterns: [
+			{
+				name: "keyword.control"
+				match: "\\\\[A-Za-z]"
+			}
+		]
+	}
+];

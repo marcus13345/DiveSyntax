@@ -1,0 +1,9 @@
+{
+	"name": "DiveEngine",
+	"description": "DiveEngine Scene File Syntax",
+	"version": "0.0.1",
+	"engines": {
+		"atom": "*",
+		"node": "*"
+	}
+}
